@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #000000;
+    color: #FFFFFF;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+::-webkit-scrollbar-thumb {
+  background: #76B900;
+}
+
+/* Base custom classes translated from original index.html */
+@layer utilities {
+  .mesh-bg {
+    background-image:
+        radial-gradient(circle at 15% 50%, rgba(118, 185, 0, 0.08), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(118, 185, 0, 0.08), transparent 25%),
+        linear-gradient(to right, #111 1px, transparent 1px),
+        linear-gradient(to bottom, #111 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+  }
+
+  .chip-bg {
+    background-image:
+        linear-gradient(rgba(118, 185, 0, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(118, 185, 0, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .glow-border {
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+  }
+
+  .glow-border:hover {
+    box-shadow: 0 0 15px rgba(118, 185, 0, 0.3);
+    border-color: #76B900;
+  }
+
+  .text-gradient {
+    background: linear-gradient(to right, #FFFFFF, #76B900);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .nav-blur {
+    backdrop-filter: blur(12px);
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+  
+  .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+  }
+}
